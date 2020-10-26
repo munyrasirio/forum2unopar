@@ -1,0 +1,270 @@
+/*
+ * Currículo
+ * Author: Munyra Silva Sírio
+ * Description: Simple website with my Curriculum Vitae, made with only HTML/CSS. This project is part of an activity proposed by UNOPAR.
+ */
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Black'), local('Montserrat-Black'),
+        url('../fonts/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Light'), local('Montserrat-Light'),
+        url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General */
+body {
+    margin: 20px;
+    background-color: #e3ffc1;
+    color: #888;
+
+    font-family: "Montserrat", sans-serif;
+}
+h2 {
+    text-align: center;
+}
+h4 {
+    margin-bottom: 10px;
+}
+h4:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+
+    background-color: #ffe777;
+    margin-top: 5px;
+}
+span {
+    display: block;
+    align-self: center;
+    position: relative;
+    height: 1px;
+    width: 100px;
+
+    overflow: visible;
+    margin-bottom: 10px;
+
+    background-color: #26c6da;
+    border: none;
+}
+span:after {
+    content: "\f5bb";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    font-weight: 600;
+    color: #26c6da;
+}
+span:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: #fff;
+    border: 1px solid #26c6da;
+    transform: rotate(45deg);}
+li {
+    position: relative;
+    margin-bottom: 7px;
+
+    list-style: none;
+    font-size: 14px;
+}
+li:after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+
+    border-radius: 55%;
+    background-color: #888;}
+p {
+    font-size: 14px;
+}
+
+/* Intro Card */
+.mss_wrapper {
+    background-color: #FFF;
+    box-shadow: 0px 0px 30px #ffe777;
+    border-radius: 25px;
+    padding: 25px;
+    margin: 0 auto 25px;
+    max-width: 1200px;
+}
+
+/* Photo Box */
+.mss_photo {
+    position: relative;
+    margin: 25px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mss_photo:before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: 1px solid #ffd200;
+    border-radius: 50%;
+}
+.mss_photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Social Media */
+.mss_social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mss_social > div a {
+    display: inline-block;
+    margin: 0 2px;
+
+    transition: .2s;
+}
+.mss_social > div a:hover {
+    transform: scale(1.1);
+}
+.mss_social > div a img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Contact */
+.mss_intro div:nth-child(2) a {
+    color: #888;
+    text-decoration: none;
+
+    transition: .2s;
+}
+.mss_intro div:nth-child(2) a:hover {
+    color: #26c6da;
+}
+.mss_intro div:nth-child(2) a i {
+    color: #26c6da;
+    padding-right: 10px;
+}
+.mss_intro div:nth-child(2) p:nth-child(3) i {
+    color: #fc573b;
+    padding-right: 10px;
+}
+.mss_intro div:nth-child(2) p:nth-child(4) i {
+    color: #ffd200;
+    padding-right: 10px;
+}
+
+/* Resume */
+.mss_resume {
+    text-align: justify;
+}
+
+/* Experience */
+.mss_exp {
+    display: flex;
+    flex-direction: column;
+}
+.mss_when {
+    font-size: 14px;
+    margin: 0;   
+}
+.mss_where {
+    margin: 0;
+}
+
+/* Certifications */
+.mss_cert {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    color: #232323;
+    text-align: center;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .mss_intro {
+        display: flex;
+        align-items: center;
+    }
+    .mss_social {
+        margin-right: 25px;
+    }
+}
+@media (min-width: 992px) {
+    main {
+        display: flex;
+    }
+}
